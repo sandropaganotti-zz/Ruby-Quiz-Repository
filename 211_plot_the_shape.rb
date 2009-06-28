@@ -30,6 +30,6 @@ EOD
 h='';
 grid.split("\n").each_with_index{|r,i|
   (i == 0 ? h = r.split(//) :
-  r.gsub(/(\.+)(@+)/){
+  r.gsub(/(\.*)(@+)/){
     d=$1.size.to_i;$2.split('').size.times{|a|
       p [h[d+a+1],r[0..0]]}})} 
